@@ -1,240 +1,75 @@
 .left {
-  background: rgba(82, 171, 139, 0.75);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  border: 1px solid rgba(215, 221, 221, 0.3);
-  width: 25%;
-  color: $white;
-  font-size: $text-font-sm;
-  height: 100%;
+  background: var(--main-green);
+  padding-top: var(--mb-4);
+  padding-bottom: var(--mb-4);
+  width: 35%;
+  color: var(--white-color);
 
-  h4 {
-    font-size: $text-font-sm;
-    margin-top: 15px;
-    margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    padding-top: 5rem;
   }
 
-  img {
-    width: 100%;
-    // max-width: 100%;
-    // height: auto;
-    max-height: 100%;
+  a {
+    word-wrap: break-word;
+    text-decoration: underline;
+  }
 
-    @media screen and (max-width: $tablet) {
-      // max-width: 100%;
-      // height: auto;
-      max-width: 100%;
-      height: auto;
-      font-size: calc($text-font-sm/2.2);
+  &__content--image {
+    margin: 0 8px;
+
+    @media screen and (max-width: 320px) {
+      margin-bottom: 2.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-left: var(--mb-4);
+      padding-right: var(--mb-4);
     }
   }
 
-  ul {
-    margin-top: 15px;
-    padding-left: 0;
+  &__content--text {
+    padding-left: var(--mb-1);
+    padding-right: var(--mb-1);
+    margin-top: 4.6rem;
 
-    li {
-      line-height: 30px;
+    @media screen and (min-width: 768px) {
+      padding-left: var(--mb-4);
+      padding-right: var(--mb-4);
+      margin-top: 5rem;
     }
-  }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-
-    &__img {
-      margin-top: 25px;
-
-      @media screen and (max-width: 320px) {
-        width: 80px;
+    .address {
+      p:not(:last-child) {
+        margin-bottom: var(--mb-1);
       }
     }
 
-    &__text {
-      &__professional-skill {
-        ul {
-          list-style: '- ';
-          padding-left: 15px;
+    .get-in-touch {
+      margin-top: var(--mb-2);
+    }
+
+    .skills {
+      margin-top: var(--mb-2);
+
+      span {
+        color: var(--black-color);
+        font-weight: bold;
+        font-size: 0.82rem;
+        line-height: 0.8;
+
+        @media screen and (min-width: 470px) {
+          font-size: 1rem;
         }
       }
 
-      &__personal-skill {
-        p {
-          margin-top: 0px;
-          font-size: $text-font-sm;
-          line-height: 30px;
-        }
-      }
-
-      &__about-me {
-        .about-me-text {
-          margin-top: 15px;
-          p {
-            @media screen and (max-width: $tablet) {
-              font-size: calc($text-font-sm/1.2);
-            }
-          }
-
-          p {
-            margin-bottom: -4px;
-          }
-        }
-      }
-      @media screen and (max-width: $tablet) {
-        margin-top: 3rem;
+      p {
+        margin-top: var(--mb-1);
       }
     }
   }
 
-  @media screen and (max-width: $laptop) {
-    width: 30%;
-    border-radius: 0;
-    background: $leftGreen;
-    font-size: calc($text-font-sm/1.2);
-
-    // img {
-    //   width: 180px;
-    //   height: 180px;
-    // }
-
-    // h4 {
-    //   font-size: calc($text-font-sm/3);
-    //   margin-top: 15px;
-    //   margin-bottom: 0;
-    // }
-
-    h2 {
-      font-size: calc($sub-heading-text-lg/1.2);
-      letter-spacing: 0px;
-      font-weight: 500;
-    }
-    h4 {
-      font-size: calc($text-font-sm/1.2);
-      margin-top: 15px;
-      margin-bottom: 0;
-    }
-
-    p {
-      margin-top: 10px;
-      font-size: calc($text-font-sm/1.2);
-      line-height: 20px;
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 0;
-
-      li {
-        line-height: 25px;
-      }
-    }
-
-    &__content {
-      &__img {
-        display: flex;
-        justify-content: flex-start;
-      }
-
-      &__text {
-        &__professional-skill {
-          ul {
-            list-style: '- ';
-            padding-left: 10px;
-          }
-        }
-      }
-
-      &__personal-skill {
-        h4 {
-          // background: $white;
-          // margin: 0;
-          font-size: calc($text-font-sm/1.2);
-        }
-      }
-
-      &__about-me {
-        .about-me-text {
-          margin-top: 10px;
-
-          p {
-            font-size: calc($text-font-sm/1.2);
-            line-height: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 30%;
-    border-radius: 0;
-    background: $leftGreen;
-    font-size: calc($text-font-sm/2.2);
-    // padding-left: 0px;
-
-    h2 {
-      font-size: calc($sub-heading-text-lg/1.2);
-      letter-spacing: 0px;
-      font-weight: 500;
-    }
-    h4 {
-      font-size: calc($text-font-sm/1.2);
-      margin-top: 15px;
-      margin-bottom: 0;
-    }
-
-    p {
-      margin-top: 10px;
-      font-size: calc($text-font-sm/2.2);
-      line-height: 20px;
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 0;
-
-      li {
-        line-height: 25px;
-      }
-    }
-
-    &__content {
-      margin-left: 5px;
-      &__img {
-        display: flex;
-        justify-content: flex-start;
-      }
-
-      &__text {
-        &__professional-skill {
-          ul {
-            list-style: '- ';
-            padding-left: 10px;
-          }
-        }
-
-        &__personal-skill {
-          h4 {
-            // background: $white;
-            // margin: 0;
-            font-size: calc($text-font-sm/1.7);
-          }
-        }
-
-        &__about-me {
-          .about-me-text {
-            margin-top: 10px;
-
-            p {
-              font-size: calc($text-font-sm/2.2);
-              line-height: 10px;
-            }
-          }
-        }
-      }
-    }
+  @media screen and (min-width: 768px) {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
   }
 }

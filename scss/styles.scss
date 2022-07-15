@@ -1,5 +1,4 @@
-@import "variables";
-@import "globals";
-
-@import "left";
-@import "right";
+@import 'variables.scss';
+@import '_globals';
+@import 'left';
+@import 'right';
